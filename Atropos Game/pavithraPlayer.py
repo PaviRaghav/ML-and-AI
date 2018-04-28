@@ -448,7 +448,7 @@ def nextMove(board, lastPlay, depth):
 
 #msg = "Given board: " + sys.argv[1] + "\n";
 #sys.stderr.write(msg);
-#sys_argv = "[13][302][1003][30002][100003][3000002][10000003][300000002][12121212]LastPlay:null"
+#sys_argv = "[13][332][1323][31322][133333][3113132][11211333][330221102][1100111203][30111211202][1212121212]LastPlay:(3,4,6,1)"
 
 
 #=====Split the input argument into words
@@ -487,6 +487,3 @@ else:                                      #if this is not the first play, parse
     str1 = "(" + str(int(color)) + "," + str(int(x)) + "," + str(int(y)) + "," + str(int(z)) + ")"
     #=====Print the next move
     sys.stdout.write(str1)
-
-
-
