@@ -1,0 +1,34 @@
+#!/bin/bash -l
+
+#  To run:  
+
+# Qsub options
+# 4 cores
+#$ -pe omp 4
+# 1 GPU
+#$ -l gpus=0.25
+# Get a new GPU, not clear if darknet works well on the older ones
+####$ -l gpu_c=3.5
+#$ -l gpu_type="P100|K40m"
+
+# Send an email to myself when the job starts, ends, or is halted with
+# an error:
+#$ -m bea
+
+# Give this job a name
+#$ -N Sentiment_Analysis
+
+export OMP_NUM_THREADS=3
+
+# Now run the analysis.
+ 
+#  Load tensorflow
+module load python/3.6.2
+module load cuda/8.0
+module load cudnn/6.0
+module load tensorflow/r1.4
+
+cd ~/SA
+
+python -u train.py
+
