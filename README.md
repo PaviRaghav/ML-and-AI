@@ -20,3 +20,6 @@
 1. Naive Bayes Classifier.
 2. Recurrent Neural network.
 ```
+
+## Computer Vision
+[Face Detection](https://github.com/PaviRaghav/ML-and-AI/blob/master/DetectFace.py)
